@@ -180,4 +180,22 @@ serve -s build
 
 ****************************************
 
+ electron-frontend.service - Electron Frontend Script
+     Loaded: loaded (/etc/systemd/system/electron-frontend.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sat 2024-04-20 22:53:41 EEST; 1min 1s ago
+    Process: 5958 ExecStart=/home/electron/Projects/scripts/electron-frontend.sh (code=exited, status=1/FAILURE)
+   Main PID: 5958 (code=exited, status=1/FAILURE)
+        CPU: 78ms
+
+Apr 20 22:53:41 electron-server systemd[1]: Started Electron Frontend Script.
+Apr 20 22:53:41 electron-server electron-frontend.sh[5959]: file:///usr/local/lib/node_modules/serve/build/main.js:169
+Apr 20 22:53:41 electron-server electron-frontend.sh[5959]:       const ipAddress = request.socket.remoteAddress?.replace("::ffff:", "") ?? "unknown";
+Apr 20 22:53:41 electron-server electron-frontend.sh[5959]:                                                      ^
+Apr 20 22:53:41 electron-server electron-frontend.sh[5959]: SyntaxError: Unexpected token '.'
+Apr 20 22:53:41 electron-server electron-frontend.sh[5959]:     at Loader.moduleStrategy (internal/modules/esm/translators.js:133:18)
+Apr 20 22:53:41 electron-server electron-frontend.sh[5959]:     at async link (internal/modules/esm/module_job.js:42:21)
+Apr 20 22:53:41 electron-server systemd[1]: electron-frontend.service: Main process exited, code=exited, status=1/FAILURE
+Apr 20 22:53:41 electron-server systemd[1]: electron-frontend.service: Failed with result 'exit-code'.
+
+
 
