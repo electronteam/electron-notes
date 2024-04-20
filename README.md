@@ -100,3 +100,6 @@ electron@electron-server:/etc/systemd/system$ sudo systemctl restart jenkins
 
 https://stackoverflow.com/questions/28340877/how-to-change-port-number-for-jenkins-installation-in-ubuntu-12-04
 https://stackoverflow.com/questions/70100117/cant-get-jenkins-to-run-on-different-port-on-ubuntu-20-4
+
+Open file manager from terminal:
+xdg-open .
