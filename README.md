@@ -179,6 +179,7 @@ cd /var/lib/jenkins/workspace/electron-frontend
 serve -s build
 
 ****************************************
+sudo systemctl status electron-frontend.service
 
  electron-frontend.service - Electron Frontend Script
      Loaded: loaded (/etc/systemd/system/electron-frontend.service; enabled; vendor preset: enabled)
@@ -197,5 +198,5 @@ Apr 20 22:53:41 electron-server electron-frontend.sh[5959]:     at async link (i
 Apr 20 22:53:41 electron-server systemd[1]: electron-frontend.service: Main process exited, code=exited, status=1/FAILURE
 Apr 20 22:53:41 electron-server systemd[1]: electron-frontend.service: Failed with result 'exit-code'.
 
-
+****************************************
 
