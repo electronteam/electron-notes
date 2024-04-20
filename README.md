@@ -9,6 +9,9 @@ git clone git@github.com:electronteam/electron-persistence.git
 git clone git@github.com:electronteam/electron-backend.git
 git clone git@github.com:electronteam/electron-frontend.git
 git clone git@github.com:electronteam/electron-admin.git
+
+docker exec -it solr-electron bin/solr create_core -c products 
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
