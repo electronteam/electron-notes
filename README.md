@@ -78,3 +78,9 @@ serve -s build -l 3001
 
 
 lrwxrwxrwx 1 root root           22 Apr 20 13:45  java -> /etc/alternatives/java
+
+sudo apt remove jenkins
+
+sudo apt install openjdk-11-jdk
+
+sudo apt install jenkins
