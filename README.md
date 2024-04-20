@@ -123,3 +123,26 @@ electron@electron-server:/etc/systemd/system$ sudo systemctl daemon-reload
 electron@electron-server:/etc/systemd/system$ sudo systemctl enable electron-backend.service 
 Created symlink /etc/systemd/system/default.target.wants/electron-backend.service → /etc/systemd/system/electron-backend.service.
 electron@electron-server:/etc/systemd/system$ sudo systemctl start electron-backend.service 
+
+electron-backend.service:
+
+[Unit]
+Description=My Script
+After=network.target
+
+[Service]
+ExecStart=/home/electron/Projects/scripts/electron-backend.sh
+
+[Install]
+WantedBy=default.target
+
+****************************************
+electron-backend.sh:
+
+#!/bin/sh
+
+cd /var/lib/jenkins/workspace/electron-backend
+
+mvn spring-boot:run
+
+****************************************
