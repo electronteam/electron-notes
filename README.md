@@ -86,3 +86,4 @@ sudo apt install openjdk-11-jdk
 sudo apt install jenkins
 
 service jenkins restart
+sudo systemctl restart jenkins
