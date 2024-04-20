@@ -160,7 +160,7 @@ electron@electron-server:/etc/systemd/system$ sudo systemctl start electron-fron
 electron-frontend.service:
 
 [Unit]
-Description=My Script
+Description=Electron Fronted Script
 After=network.target
 
 [Service]
