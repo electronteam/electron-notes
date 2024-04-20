@@ -147,6 +147,16 @@ mvn spring-boot:run
 
 ****************************************
 
+electron@electron-server:/var/lib/jenkins/workspace/electron-frontend$ cd /etc/systemd/system
+electron@electron-server:/etc/systemd/system$ sudo touch electron-frontend.service
+[sudo] password for electron: 
+electron@electron-server:/etc/systemd/system$ sudo nano electron-frontend.service 
+electron@electron-server:/etc/systemd/system$ sudo systemctl daemon-reload
+electron@electron-server:/etc/systemd/system$ sudo systemctl enable electron-frontend.service
+Created symlink /etc/systemd/system/default.target.wants/electron-frontend.service → /etc/systemd/system/electron-frontend.service.
+electron@electron-server:/etc/systemd/system$ sudo systemctl start electron-frontend.service
+
+****************************************
 electron-frontend.service:
 
 [Unit]
