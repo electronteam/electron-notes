@@ -103,3 +103,6 @@ https://stackoverflow.com/questions/70100117/cant-get-jenkins-to-run-on-differen
 
 Open file manager from terminal:
 xdg-open .
+
+Install deb file
+sudo dpkg -i package_file.deb
