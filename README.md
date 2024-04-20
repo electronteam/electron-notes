@@ -75,3 +75,6 @@ git pull -r
 npm run build
 serve -s build
 serve -s build -l 3001
+
+
+lrwxrwxrwx 1 root root           22 Apr 20 13:45  java -> /etc/alternatives/java
