@@ -109,3 +109,17 @@ xdg-open .
 
 Install deb file
 sudo dpkg -i package_file.deb
+
+Start electron-backed at system boot:
+
+electron@electron-server:/etc/systemd/system$ sudo touch electron-backend.service
+[sudo] password for electron: 
+Sorry, try again.
+[sudo] password for electron: 
+electron@electron-server:/etc/systemd/system$ nano electron-backend.service 
+electron@electron-server:/etc/systemd/system$ 
+electron@electron-server:/etc/systemd/system$ sudo nano electron-backend.service 
+electron@electron-server:/etc/systemd/system$ sudo systemctl daemon-reload
+electron@electron-server:/etc/systemd/system$ sudo systemctl enable electron-backend.service 
+Created symlink /etc/systemd/system/default.target.wants/electron-backend.service → /etc/systemd/system/electron-backend.service.
+electron@electron-server:/etc/systemd/system$ sudo systemctl start electron-backend.service 
