@@ -87,3 +87,16 @@ sudo apt install jenkins
 
 service jenkins restart
 sudo systemctl restart jenkins
+
+Jenkins change default PORT:
+
+electron@electron-server:/etc/systemd/system$ sudo mkdir jenkins.service.d
+electron@electron-server:/etc/systemd/system$ sudo touch /etc/systemd/system/jenkins.service.d/override.conf
+electron@electron-server:/etc/systemd/system$ sudo nano /etc/systemd/system/jenkins.service.d/override.conf
+electron@electron-server:/etc/systemd/system$ sudo systemctl restart jenkins
+Warning: The unit file, source configuration file or drop-ins of jenkins.service changed on disk. Run 'systemctl daemon-reload' to reload units.
+electron@electron-server:/etc/systemd/system$ systemctl daemon-reload
+electron@electron-server:/etc/systemd/system$ sudo systemctl restart jenkins
+
+https://stackoverflow.com/questions/28340877/how-to-change-port-number-for-jenkins-installation-in-ubuntu-12-04
+https://stackoverflow.com/questions/70100117/cant-get-jenkins-to-run-on-different-port-on-ubuntu-20-4
