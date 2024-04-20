@@ -146,3 +146,28 @@ cd /var/lib/jenkins/workspace/electron-backend
 mvn spring-boot:run
 
 ****************************************
+
+electron-frontend.service:
+
+[Unit]
+Description=My Script
+After=network.target
+
+[Service]
+ExecStart=/home/electron/Projects/scripts/electron-frontend.sh
+
+[Install]
+WantedBy=default.target
+
+****************************************
+electron-frontend.sh:
+
+#!/bin/sh
+
+cd /var/lib/jenkins/workspace/electron-frontend
+
+serve -s build
+
+****************************************
+
+
